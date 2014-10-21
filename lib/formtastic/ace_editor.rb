@@ -12,7 +12,7 @@ module Formtastic
           <style type="text/css">
             ##{dom_id} { display: none; }
             ##{dom_id}-container {
-              height: 200px;
+              height: #{height};
               position: relative;
             }
             ##{dom_id}-editor {
@@ -46,6 +46,10 @@ module Formtastic
 
       def mode
         options[:mode] || 'html'
+      end
+
+      def height
+        options [:height] || '200px'
       end
     end
   end

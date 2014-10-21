@@ -49,7 +49,7 @@ module Formtastic
       end
 
       def height
-        options [:height] || '200px'
+        options[:height] || '200px'
       end
     end
   end

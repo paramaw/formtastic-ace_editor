@@ -33,7 +33,7 @@ module Formtastic
               editor.clearSelection();
               editor.getSession().setTabSize(2);
               editor.getSession().setUseSoftTabs(true);
-              editor.getSession().setShowInvisibles(true);
+              editor.setShowInvisibles(true);
               editor.getSession().on('change', function(e) {
                 document.getElementById('#{dom_id}').value = editor.getValue();
               });

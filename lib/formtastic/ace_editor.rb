@@ -31,6 +31,8 @@ module Formtastic
               editor.setTheme('ace/theme/#{theme}');
               editor.getSession().setMode('ace/mode/#{mode}');
               editor.clearSelection();
+              editor.getSession().setTabSize(2);
+              editor.getSession().setUseSoftTabs(true);
               editor.getSession().on('change', function(e) {
                 document.getElementById('#{dom_id}').value = editor.getValue();
               });
